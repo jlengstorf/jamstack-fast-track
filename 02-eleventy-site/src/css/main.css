@@ -1,0 +1,129 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  color: darkslategray;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica,
+    Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+  margin: 0;
+}
+
+header {
+  background: navy;
+  font-size: 1.25rem;
+  padding: 0.5rem 5vw;
+  text-align: center;
+}
+
+header a {
+  color: white;
+  display: inline-block;
+  padding: 0.5rem;
+  text-decoration: none;
+}
+
+header a:focus,
+header a:hover {
+  outline: 2px solid white;
+}
+
+header a[rel='home'] {
+  font-weight: 900;
+}
+
+header a.active {
+  background: white;
+  color: navy;
+}
+
+header nav a + a {
+  margin-left: 1rem;
+}
+
+main {
+  margin: 2rem auto 4rem;
+  max-width: 54ch;
+  width: 90vw;
+}
+
+h1 {
+  color: black;
+}
+
+label,
+input,
+textarea {
+  display: block;
+  font-size: 1rem;
+}
+
+label {
+  margin-top: 1rem;
+}
+
+input,
+textarea {
+  border: 1px solid powderblue;
+  border-radius: 0.25rem;
+  margin-top: 0.25rem;
+  padding: 0.5rem;
+  width: 100%;
+}
+
+textarea {
+  height: 6rem;
+}
+
+button {
+  background: navy;
+  border: 0;
+  border-radius: 0.25rem;
+  color: white;
+  font-size: 1.25rem;
+  font-weight: 900;
+  margin-top: 1rem;
+  text-transform: uppercase;
+  padding: 0.5rem 1rem;
+}
+
+.comment-list {
+  list-style: none;
+  padding: 0;
+}
+
+.comment-list li {
+  border-bottom: 1px solid powderblue;
+  margin: 0;
+  padding: 1rem 0.25rem;
+}
+
+.comment-text {
+  margin: 0 0 0.5rem;
+}
+
+.comment-author {
+  color: gray;
+  font-size: 0.875rem;
+  font-style: italic;
+  margin: 0;
+}
+
+footer {
+  border-top: 1px solid powderblue;
+  font-size: 0.875rem;
+  padding: 1rem 5vw;
+  text-align: center;
+}
+
+@media (min-width: 550px) {
+  header {
+    display: flex;
+    font-size: 1.5rem;
+    justify-content: space-between;
+  }
+
+  main {
+    margin-top: 4rem;
+  }
+}
