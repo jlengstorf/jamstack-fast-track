@@ -20,6 +20,9 @@
       {{ content | safe }}
 
       <div class="comments">
+        <h2>Comments</h2>
+        <ul class="comment-list"></ul>
+        
         <h3>Add a Comment</h3>
         <form action="/.netlify/functions/add-comment" method="POST">
           <label for="username">GitHub Username</label>
@@ -38,5 +41,43 @@
     <footer>
       <nav>Built by <a href="#yoursitehere">Your Name Here</a></nav>
     </footer>
+
+    <template id="comment">
+      <li>
+        <p class="comment-text"></p>
+        <p class="comment-author"></p>
+      </li>
+    </template>
+
+    <script>
+      async function displayComments() {
+        if (!'content' in document.createElement('template')) {
+          console.error('Your browser doesn’t support the template element.');
+          return;
+        }
+
+        const commentContainer = document.querySelector('.comment-list');
+        const commentTemplate = document.querySelector('#comment');
+
+        const response = await fetch('/.netlify/functions/load-comments', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ page: '{{ page.url }}' })
+        })
+          .then(res => res.json())
+          .catch(err => console.error(err));
+        
+        response.commentsByPage.data.forEach(({githubUsername, comment}) => {
+          const container = commentTemplate.content.cloneNode(true);
+          
+          container.querySelector('.comment-text').innerText = comment;
+          container.querySelector('.comment-author').innerText = `posted by ${githubUsername}`;
+
+          commentContainer.appendChild(container);
+        });
+      }
+
+      displayComments();
+    </script>
   </body>
 </html>
