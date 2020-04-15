@@ -5,7 +5,7 @@
   "main": ".eleventy.js",
   "scripts": {
     "build": "eleventy",
-    "dev": "eleventy --serve",
+    "dev": "ntl dev",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
