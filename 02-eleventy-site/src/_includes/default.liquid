@@ -17,6 +17,21 @@
 
     <main>
       {{ content | safe }}
+
+      <div class="comments">
+        <h3>Add a Comment</h3>
+        <form action="/.netlify/functions/add-comment" method="POST">
+          <label for="username">GitHub Username</label>
+          <input id="username" name="githubUsername" type="text" />
+        
+          <label for="page-comment">Comment</label>
+          <textarea id="page-comment" name="comment"></textarea>
+
+          <input type="hidden" name="page" value="{{page.url}}" />
+        
+          <button type="submit">Post Comment</button>
+        </form>
+      </div>
     </main>
 
     <footer>
