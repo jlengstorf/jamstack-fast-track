@@ -5,12 +5,35 @@
  */
 
 const qs = require('qs');
+const { sendQuery } = require('./util/send-query');
 
 exports.handler = async (event) => {
   const { name, email, message } = qs.parse(event.body);
 
-  return {
-    statusCode: 200,
-    body: JSON.stringify({ name, email, message }),
-  };
+  if (!name || !email || !message) {
+    return {
+      statusCode: 400,
+      body: JSON.stringify({
+        error: 'name, email, and message fields are all required.',
+      }),
+    };
+  }
+
+  return sendQuery({
+    query: `
+      mutation ($name: String! $email: String! $message: String!) {
+        createContact(data: {
+          name: $name,
+          email: $email,
+          message: $message,
+        }) {
+          _id
+          message
+          name
+          email
+        }
+      }
+    `,
+    variables: { name, email, message },
+  });
 };
