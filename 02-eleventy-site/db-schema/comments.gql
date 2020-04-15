@@ -3,3 +3,7 @@ type Comment {
   comment: String!
   page: String!
 }
+
+type Query {
+  commentsByPage(page: String!): [Comment!]!
+}
