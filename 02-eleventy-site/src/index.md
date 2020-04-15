@@ -1,5 +1,6 @@
 ---
 layout: default
+title: Prerendered Sites
 ---
 
 # Build Websites Like It’s 2020!
