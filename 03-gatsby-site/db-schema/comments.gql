@@ -1,0 +1,10 @@
+type Comment {
+  githubUsername: String!
+  page: String!
+  comment: String!
+}
+
+type Query {
+  commentsByPage(page: String!): [Comment!]!
+  commentsByUser(githubUsername: String!): [Comment!]!
+}

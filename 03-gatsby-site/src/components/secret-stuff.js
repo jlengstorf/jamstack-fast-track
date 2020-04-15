@@ -1,5 +1,6 @@
 import React from 'react';
 import { navigate } from 'gatsby';
+import UserComments from './user-comments';
 
 const SecretStuff = () => {
   const [githubUsername, setGithubUsername] = React.useState(false);
@@ -36,6 +37,7 @@ const SecretStuff = () => {
         Hi @{githubUsername}
       </h2>
       <button onClick={handleLogout}>Log Out</button>
+      <UserComments githubUsername={githubUsername} />
     </>
   );
 };
