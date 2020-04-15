@@ -10,8 +10,8 @@
     <header>
       <a href="/">Jamstack Fast Track</a>
       <nav>
-        <a href="/" class="active">Home</a>
-        <a href="/about/">About</a>
+        <a href="/" {% if page.url == "/" %}class="active"{% endif %}>Home</a>
+        <a href="/about/" {% if page.url == "/about/" %}class="active"{% endif %}>About</a>
       </nav>
     </header>
 
