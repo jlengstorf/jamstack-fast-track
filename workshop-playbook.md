@@ -1,6 +1,6 @@
 # Workshop Playbook
 
-TKTK describe this doc
+This document is a high-level overview of what we’ll cover in the workshop.
 
 ## Legend
 
