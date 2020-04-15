@@ -1,17 +1,15 @@
 {
-  "name": "02-eleventy-site",
+  "name": "functions",
   "version": "1.0.0",
   "description": "",
-  "main": ".eleventy.js",
+  "main": "add-comment.js",
   "scripts": {
-    "build": "cd functions && npm i && cd .. && eleventy",
-    "dev": "ntl dev",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@11ty/eleventy": "^0.10.0"
+    "node-fetch": "^2.6.0"
   }
 }

@@ -1,0 +1,5 @@
+type Comment {
+  githubUsername: String!
+  comment: String!
+  page: String!
+}
