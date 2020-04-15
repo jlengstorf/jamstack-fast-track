@@ -18,15 +18,45 @@
 
 &nbsp;
 
-TKTK add description
+This workshop is designed to help you and your team level up on the Jamstack. Learn how to build web experiences that are more polished, faster to build, easier to maintain, less costly to operate, and more fun to work on!
 
-&nbsp;
+## What do I need to do before the workshop?
 
-<p align="center">
-  <a href="https://app.netlify.com/start/deploy?repository=https://github.com/jlengstorf/jamstack-fast-track&utm_source=learnwithjason&utm_medium=github&utm_campaign=devex">
-    <img src="https://www.netlify.com/img/deploy/button.svg" alt="Deploy your own copy of this project to Netlify" />
-  </a>
-</p>
+You have two options in this workshop:
+
+1. Watch as I code through the app, then come back and code at your own pace on the replay.
+2. Code along with me. There will be exercises where you’ll be able to code on your own.
+
+If you’d like to watch first, then code at your own pace later, there’s nothing to do to get started — just show up on time and ready to learn!
+
+If you plan to code along, please make sure to complete these steps _before_ the workshop starts:
+
+1.  Clone this repo
+   
+    ```bash
+    git clone git@github.com:jlengstorf/jamstack-fast-track.git
+    cd jamstack-fast-track/
+    ```
+
+2.  Make sure you have Node.js v10 or newer installed. I will be using Node v12.13.0 for this workshop, so if you want to be extra super sure everything is compatible, you can make sure you’re using that version.
+
+    ```bash
+    node --version
+    ```
+
+3.  Create [a Netlify account](https://app.netlify.com).
+
+4.  Install the [Netlify CLI](https://docs.netlify.com/cli/get-started/)
+
+    ```bash
+    npm install -g netlify-cli
+    ```
+
+And that’s it! We’ll walk through all the other steps together in the workshop.
+
+## Lesson Plan
+
+Please see the [workshop playbook](./workshop-playbook.md) for details on how the workshop will run.
 
 ## License
 
