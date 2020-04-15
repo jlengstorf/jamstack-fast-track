@@ -3,7 +3,7 @@ const fetch = require('node-fetch');
 exports.sendQuery = async ({ query, variables }) => {
   const response = await fetch('https://graphql.fauna.com/graphql', {
     method: 'POST',
-    headers: { Authorization: `Bearer ${process.env.FAUNA_API_KEY}` },
+    headers: { Authorization: `Bearer ${process.env.FAUNA_SERVER_KEY}` },
     body: JSON.stringify({ query, variables }),
   })
     .then((res) => res.json())
