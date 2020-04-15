@@ -6,4 +6,5 @@ type Comment {
 
 type Query {
   commentsByPage(page: String!): [Comment!]!
+  commentsByUser(githubUsername: String!): [Comment!]!
 }
