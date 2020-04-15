@@ -32,7 +32,7 @@ If you’d like to watch first, then code at your own pace later, there’s noth
 If you plan to code along, please make sure to complete these steps _before_ the workshop starts:
 
 1.  Clone this repo
-   
+
     ```bash
     git clone git@github.com:jlengstorf/jamstack-fast-track.git
     cd jamstack-fast-track/
@@ -57,6 +57,18 @@ And that’s it! We’ll walk through all the other steps together in the worksh
 ## Lesson Plan
 
 Please see the [workshop playbook](./workshop-playbook.md) for details on how the workshop will run.
+
+## Resources
+
+- <https://jamstack.org/>
+- [https://netlify.com](https://netlify.com/?utm_source=learnwithjason&utm_medium=jft-readme-jl&utm_campaign=devex)
+- <https://fauna.com>
+- <https://www.11ty.dev>
+- <https://gatsbyjs.org>
+- <https://www.howtographql.com/>
+- <https://www.partycorgi.com/>
+- [https://egghead.io/](https://egghead.io/s/615kp)
+- [Fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API)
 
 ## License
 
